@@ -3,7 +3,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-import { Swiper, SwiperSlideProps } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperSlideProps } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
@@ -13,7 +13,7 @@ const headerCarouselVariants = cva("w-full relative");
 
 export interface HeaderCarouselProps extends React.HTMLAttributes<SwiperSlideProps>, VariantProps<typeof headerCarouselVariants> {}
 
-function HeaderCarousel({ className, children }: HeaderCarouselProps) {
+function HeaderCarousel({ className, children }: HeaderCarouselProps): JSX.Element {
   return (
     <Swiper
       slidesPerView={1}

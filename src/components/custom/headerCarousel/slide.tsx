@@ -1,6 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import { SwiperSlide, SwiperSlideProps } from "swiper/react";
-import { cn } from "@/lib/utils";
 
 import Image from "next/image";
 
@@ -12,9 +11,9 @@ export interface HeaderCarouselSlideProps extends React.HTMLAttributes<SwiperSli
   slideUrl: any;
 }
 
-function HeaderCarouselSlide({ className, slideName, slideDate, slideUrl }: HeaderCarouselSlideProps) {
+function HeaderCarouselSlide({ slideName, slideDate, slideUrl }: HeaderCarouselSlideProps): JSX.Element {
   return (
-    <SwiperSlide className={cn(headerCarouselSlideVariants(), className)}>
+    <>
       <a className="relative" href="#">
         <div className="absolute z-50 flex flex-col justify-center min-[900px]:items-start left-5 min-[900px]:left-20 bottom-14 min-[900px]:bottom-32 w-full">
           <div className="flex space-x-3 mb-3 min-[900px]:me-auto items-center">
@@ -29,7 +28,7 @@ function HeaderCarouselSlide({ className, slideName, slideDate, slideUrl }: Head
         <Image className="object-cover w-full h-full mx-auto" src={slideUrl} alt="slide-img" priority />
         <div className="absolute bottom-0 bg-gradient-to-t from-black opacity-45 w-full h-1/2"></div>
       </a>
-    </SwiperSlide>
+    </>
   );
 }
 export { HeaderCarouselSlide, headerCarouselSlideVariants };
