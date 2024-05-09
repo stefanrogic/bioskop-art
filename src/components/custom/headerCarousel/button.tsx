@@ -1,8 +1,8 @@
-import { Button } from "../../ui/button";
+import { Button } from "@/components/ui/button";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-const headerCarouselButtonVariants = cva("block absolute bottom-10 z-50 swiper-button-prev-hero rounded-full p-3 border-2 text-white hover:text-black border-white hover:bg-white ease-in duration-100");
+const headerCarouselButtonVariants = cva("block absolute bottom-10 z-50 rounded-full border border-white bg-transparent hover:bg-white hover:text-black px-3 py-2");
 
 export interface HeaderCarouselButtonProps extends React.HTMLAttributes<HTMLButtonElement>, VariantProps<typeof headerCarouselButtonVariants> {
   direction: string;
