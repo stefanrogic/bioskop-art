@@ -3,7 +3,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-import { Swiper, SwiperSlide, SwiperSlideProps } from "swiper/react";
+import { Swiper, SwiperSlideProps } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
