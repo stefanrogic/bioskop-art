@@ -1,7 +1,4 @@
 "use client";
-import "../globals.css";
-
-import { NavigationMenu, NavigationMenuContent, NavigationMenuIndicator, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuViewport } from "@/components/ui/navigation-menu";
 
 export default function Layout({
   children,
@@ -10,18 +7,7 @@ export default function Layout({
 }>) {
   return (
     <>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Link</NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-
-      <div>{children}</div>
+      <main className="flex flex-col min-h-screen max-w-[1400px] px-5 lg:px-0 mx-auto">{children}</main>
     </>
   );
 }
