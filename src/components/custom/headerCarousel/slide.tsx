@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import { SwiperSlide, SwiperSlideProps } from "swiper/react";
+import { SwiperSlideProps } from "swiper/react";
 
 import Image from "next/image";
 
