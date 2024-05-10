@@ -21,7 +21,7 @@ function Navbar({ className }: NavbarProps): JSX.Element {
   return (
     <nav className={cn(navbarVariants(), className)}>
       <Link href="/">
-        <Image className="rounded-t-none rounded-b-lg w-36 aspect-square" src={NavLogo} alt="nav-logo" priority />
+        <Image className="w-36 aspect-square" src={NavLogo} alt="nav-logo" priority />
       </Link>
 
       <div className="flex flex-row gap-7 py-10">
