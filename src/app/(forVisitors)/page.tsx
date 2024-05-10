@@ -12,7 +12,7 @@ import { Navbar } from "@/components/custom/navbar";
 function getCarouselSlides() {
   return [
     { name: "Joker", date: "04 Marta", url: SlideOne },
-    { name: "Matrix", date: "04 Marta", url: SlideTwo },
+    { name: "Matriks", date: "04 Marta", url: SlideTwo },
     { name: "Dina: Drugi Deo", date: "04 Marta", url: SlideThree },
   ];
 }
