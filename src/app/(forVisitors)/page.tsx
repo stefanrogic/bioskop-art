@@ -22,7 +22,7 @@ export default function HomePage(): JSX.Element {
     <>
       <header className="relative">
         <Navbar />
-        <HeaderCarousel className="h-[720px]">
+        <HeaderCarousel className="h-[820px]">
           {getCarouselSlides().map((s, i) => (
             <SwiperSlide key={i} className="bg-slate-300 cursor-pointer">
               <HeaderCarouselSlide slideName={s.name} slideDate={s.date} slideUrl={s.url} />

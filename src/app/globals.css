@@ -34,6 +34,7 @@
 
     --radius: 0.5rem;
 
+    --swiper-pagination-bottom: 50px;
     --swiper-pagination-color: #fff;
     --swiper-pagination-bullet-inactive-color: #999999;
     --swiper-pagination-bullet-inactive-opacity: 1;
