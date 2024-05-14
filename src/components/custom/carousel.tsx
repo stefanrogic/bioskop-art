@@ -13,9 +13,11 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const headerCarouselVariants = cva("w-full relative");
-export interface HeaderCarouselProps extends React.HTMLAttributes<SwiperSlideProps>, VariantProps<typeof headerCarouselVariants> {}
+export interface HeaderCarouselProps extends React.HTMLAttributes<SwiperSlideProps>, VariantProps<typeof headerCarouselVariants> {
+  bulletSize: string;
+}
 
-function HeaderCarousel({ className, children }: HeaderCarouselProps): JSX.Element {
+function HeaderCarousel({ className, children, bulletSize }: HeaderCarouselProps): JSX.Element {
   return (
     <Swiper
       slidesPerView={1}
@@ -29,6 +31,7 @@ function HeaderCarousel({ className, children }: HeaderCarouselProps): JSX.Eleme
       }}
       modules={[Navigation, Pagination, Autoplay, EffectFade]}
       className={cn(headerCarouselVariants(), className)}
+      style={{ "--swiper-pagination-bullet-width": bulletSize }}
     >
       {children}
 
@@ -72,7 +75,7 @@ function HeaderCarouselSlide({ className, slideName, slideDate, slideUrl }: Head
           <div className="px-2 pt-3 pb-2 bg-red-700 text-white text-sm leading-3 font-bold">3D</div>
         </div>
         <h2 className="text-5xl min-[900px]:text-7xl text-white font-bold">{slideName}</h2>
-        <p className="min-[900px]:text-2xl text-white font-thin mt-1">od {slideDate}</p>
+        <p className="min-[900px]:text-2xl text-slate-300 font-light mt-1">od {slideDate}</p>
       </div>
 
       <div className="absolute top-0 bg-gradient-to-b from-black to-transparent opacity-25 w-full h-24"></div>
