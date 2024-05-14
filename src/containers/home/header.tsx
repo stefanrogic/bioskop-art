@@ -21,7 +21,7 @@ function Header(): JSX.Element {
   return (
     <header className="relative">
       <Navbar />
-      <HeaderCarousel className="h-[820px]" bulletSize={getCarouselSlides().length > 3 ? "20%" : "26.5%"}>
+      <HeaderCarousel className="h-[820px]">
         {getCarouselSlides().map((s, i) => (
           <SwiperSlide key={i} className="bg-slate-300 cursor-pointer">
             <HeaderCarouselSlide slideName={s.name} slideDate={s.date} slideUrl={s.url} />

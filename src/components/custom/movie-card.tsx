@@ -1,10 +1,15 @@
 import Link from "next/link";
 
-interface MovieData {
-  data: object;
+interface Data {
+  data: {
+    name: string;
+    date: string;
+    tag?: string;
+    tagColor?: string;
+  };
 }
 
-function MovieCard({ data }: MovieData): JSX.Element {
+function MovieCard({ data }: Data): JSX.Element {
   return (
     <Link href="#" className="w-full flex flex-col gap-5">
       <div className="w-full aspect-[3/4] bg-slate-400"></div>
