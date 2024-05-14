@@ -13,11 +13,9 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const headerCarouselVariants = cva("w-full relative");
-export interface HeaderCarouselProps extends React.HTMLAttributes<SwiperSlideProps>, VariantProps<typeof headerCarouselVariants> {
-  bulletSize: string;
-}
+export interface HeaderCarouselProps extends React.HTMLAttributes<SwiperSlideProps>, VariantProps<typeof headerCarouselVariants> {}
 
-function HeaderCarousel({ className, children, bulletSize }: HeaderCarouselProps): JSX.Element {
+function HeaderCarousel({ className, children }: HeaderCarouselProps): JSX.Element {
   return (
     <Swiper
       slidesPerView={1}
@@ -31,7 +29,6 @@ function HeaderCarousel({ className, children, bulletSize }: HeaderCarouselProps
       }}
       modules={[Navigation, Pagination, Autoplay, EffectFade]}
       className={cn(headerCarouselVariants(), className)}
-      style={{ "--swiper-pagination-bullet-width": bulletSize }}
     >
       {children}
 
