@@ -14,7 +14,6 @@ const navLinks = [
   { link: "Repertoar", href: "repertoar" },
   { link: "Arhiva", href: "arhiva" },
   { link: "O nama", href: "o-nama" },
-  { link: "Kontakt", href: "kontakt" },
 ];
 
 function Navbar({ className }: NavbarProps): JSX.Element {
@@ -24,12 +23,16 @@ function Navbar({ className }: NavbarProps): JSX.Element {
         <Image className="w-36 aspect-square" src={NavLogo} alt="nav-logo" priority />
       </Link>
 
-      <div className="flex flex-row gap-7 py-10">
+      <div className="flex flex-row items-center gap-7 py-10">
         {navLinks.map((l, i) => (
           <Link href={l.href} key={l.link + i} className="text-white font-bold hover:underline">
             {l.link}
           </Link>
         ))}
+
+        <Link href="#" className="text-white border-2 px-10 py-3 font-bold hover:bg-white hover:text-black ease-in duration-300">
+          Kontakt
+        </Link>
       </div>
     </nav>
   );

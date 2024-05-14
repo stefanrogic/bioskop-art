@@ -34,14 +34,14 @@
 
     --radius: 0.5rem;
 
-    --swiper-pagination-bottom: 50px;
+    --swiper-pagination-bottom: 52px;
     --swiper-pagination-color: #fff;
-    --swiper-pagination-bullet-inactive-color: #999999;
+    --swiper-pagination-bullet-inactive-color: #494949;
     --swiper-pagination-bullet-inactive-opacity: 1;
-    --swiper-pagination-bullet-width: 50px;
+    /* --swiper-pagination-bullet-width: 26.5%; */
     --swiper-pagination-bullet-height: 2px;
     --swiper-pagination-bullet-border-radius: 5px;
-    --swiper-pagination-bullet-horizontal-gap: 6px;
+    --swiper-pagination-bullet-horizontal-gap: 0px;
 
     --swiper-navigation-color: #fff;
 
