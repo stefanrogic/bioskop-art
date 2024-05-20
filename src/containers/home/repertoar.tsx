@@ -7,16 +7,16 @@ import PulpFictionImg from "@/assets/images/movie-cards/pulp-fiction-card.png";
 
 function getCurrentMovies() {
   return [
-    { name: "Dina: Drugi Deo", img: DinaImg, date: "od 04 Marta", tag: "Uskoro", tagColor: "bg-red-500" },
-    { name: "Matriks", img: MatrixImg, date: "od 04 Marta", tag: "Premijera", tagColor: "bg-blue-500" },
-    { name: "Joker", img: JokerImg, date: "od 04 Marta", tag: "Zadnji dan", tagColor: "bg-yellow-500" },
-    { name: "Pulp Fiction", img: PulpFictionImg, date: "od 04 Marta" },
+    { name: "Dina: Drugi Deo", img: DinaImg, date: "od 04 Marta", tag: "Uskoro", tagColor: "bg-red-500", genre: ["Akcija", "Drama"] },
+    { name: "Matriks", img: MatrixImg, date: "od 04 Marta", tag: "Premijera", tagColor: "bg-blue-500", genre: ["Akcija", "Drama"] },
+    { name: "Joker", img: JokerImg, date: "od 04 Marta", tag: "Zadnji dan", tagColor: "bg-yellow-500", genre: ["Akcija", "Drama"] },
+    { name: "Pulp Fiction", img: PulpFictionImg, date: "od 04 Marta", genre: ["Akcija", "Drama"] },
   ];
 }
 
 function RepertoarContainer(): JSX.Element {
   return (
-    <section className="min-h-[50vh] flex flex-col items-start gap-10 px-5 lg:px-20 mt-40">
+    <section className="min-h-[50vh] flex flex-col items-start gap-10 px-5 lg:px-20 mt-20">
       <div className="flex flex-col">
         <h3 className="font-bold text-xl text-red-500">TRENUTNO NA</h3>
         <h1 className="font-bold text-4xl">REPERTOARU</h1>

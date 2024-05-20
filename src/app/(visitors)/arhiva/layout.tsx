@@ -1,6 +1,6 @@
 "use client";
 
-export default function MovieLayout({
+export default function ArchiveLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

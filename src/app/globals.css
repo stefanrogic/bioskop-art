@@ -35,17 +35,25 @@
     --radius: 0.5rem;
 
     --swiper-pagination-bottom: 52px;
-    --swiper-pagination-color: #fff;
-    --swiper-pagination-bullet-inactive-color: #494949;
     --swiper-pagination-bullet-inactive-opacity: 1;
-    --swiper-pagination-bullet-width: 20%;
-    --swiper-pagination-bullet-height: 2px;
-    --swiper-pagination-bullet-border-radius: 5px;
     --swiper-pagination-bullet-horizontal-gap: 0px;
 
-    --swiper-navigation-color: #fff;
+    .swiper-pagination-bullet {
+      width: 20%;
+      height: 2px;
+      border-radius: 0px;
+      background-color: #494949;
+    }
 
-    --swiper-scrollbar-drag-color: #fff;
+    .swiper-pagination-bullet-inactive {
+      opacity: 1;
+      height: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+      height: 3px;
+      background-color: #fff;
+    }
   }
 
   .dark {
