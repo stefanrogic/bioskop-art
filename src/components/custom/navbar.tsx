@@ -11,7 +11,7 @@ const navbarVariants = cva("absolute top-0 z-50 px-20 w-full flex flex-row justi
 export interface NavbarProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof navbarVariants> {}
 
 const navLinks = [
-  { link: "Početna", href: "pocetna" },
+  { link: "Početna", href: "/" },
   { link: "Repertoar", href: "repertoar" },
   { link: "Arhiva", href: "arhiva" },
   { link: "O nama", href: "o-nama" },
@@ -20,13 +20,15 @@ const navLinks = [
 function Navbar({ className }: NavbarProps): JSX.Element {
   return (
     <nav className={cn(navbarVariants(), className)}>
-      <Link href="/" className="bg-[#db0b0b]">
-        <motion.div whileHover={{ marginTop: "25px" }} whileTap={{ marginTop: "150px" }}>
-          <Image className="w-36 aspect-square" src={NavLogo} alt="nav-logo" priority />
-        </motion.div>
-      </Link>
+      <motion.div className=" absolute bg-[#db0b0b] cursor-pointer" initial={{ top: "-145px" }} animate={{ top: 0 }} transition={{ duration: 0.2 }}>
+        <Link href="/">
+          <motion.div whileHover={{ marginTop: "25px" }} whileTap={{ marginTop: "75px" }}>
+            <Image className="w-36 aspect-square" src={NavLogo} alt="nav-logo" priority />
+          </motion.div>
+        </Link>
+      </motion.div>
 
-      <div className="flex flex-row items-center gap-7 py-10">
+      <div className="ms-auto flex flex-row items-center gap-7 py-10">
         {navLinks.map((l, i) => (
           <Link href={l.href} key={l.link + i} className="text-white font-bold hover:underline">
             {l.link}
