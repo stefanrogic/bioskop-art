@@ -15,13 +15,13 @@ interface Data {
 function MovieCard({ data }: Data): JSX.Element {
   return (
     <Link href="#" className="w-full flex flex-col gap-5">
-      <div className="relative w-full aspect-[3/4] bg-slate-400">
+      <div className="relative w-full aspect-[4/6] bg-slate-400">
         <div className="opacity-0 hover:opacity-100 duration-300 absolute flex flex-col justify-center items-center gap-1 w-full h-full bg-black text-white font-bold bg-opacity-30">
           {data?.genre.map((g, i) => (
             <span key={i}>{g}</span>
           ))}
         </div>
-        <Image src={data?.img} alt="movie-poster" className="object-cover w-full h-full" priority />
+        <Image src={data?.img} alt="movie-poster" className="object-cover w-full h-full" fill={true} priority />
       </div>
       <div className="flex flex-col gap-7">
         <div className="flex flex-col">

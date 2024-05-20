@@ -1,5 +1,7 @@
 "use client";
 
+import { Navbar } from "@/components/custom/navbar";
+
 export default function ArchiveLayout({
   children,
 }: Readonly<{
