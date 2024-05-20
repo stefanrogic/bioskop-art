@@ -4,6 +4,7 @@ import NavLogo from "@/assets/images/logo.jpg";
 
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 const navbarVariants = cva("absolute top-0 z-50 px-20 w-full flex flex-row justify-between items-start");
 
@@ -19,8 +20,10 @@ const navLinks = [
 function Navbar({ className }: NavbarProps): JSX.Element {
   return (
     <nav className={cn(navbarVariants(), className)}>
-      <Link href="/">
-        <Image className="w-36 aspect-square" src={NavLogo} alt="nav-logo" priority />
+      <Link href="/" className="bg-[#db0b0b]">
+        <motion.div whileHover={{ marginTop: "25px" }} whileTap={{ marginTop: "150px" }}>
+          <Image className="w-36 aspect-square" src={NavLogo} alt="nav-logo" priority />
+        </motion.div>
       </Link>
 
       <div className="flex flex-row items-center gap-7 py-10">
@@ -30,7 +33,7 @@ function Navbar({ className }: NavbarProps): JSX.Element {
           </Link>
         ))}
 
-        <Link href="#" className="text-white border-2 px-10 py-3 font-bold hover:bg-white hover:text-black ease-in duration-300">
+        <Link href="#" className="text-white border-2 border-white px-10 py-3 font-bold hover:bg-white hover:text-black ease-in duration-300">
           Kontakt
         </Link>
       </div>
