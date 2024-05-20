@@ -21,7 +21,7 @@ function MovieCard({ data }: Data): JSX.Element {
             <span key={i}>{g}</span>
           ))}
         </div>
-        <Image src={data?.img} alt="movie-poster" className="object-cover w-full h-full" />
+        <Image src={data?.img} alt="movie-poster" className="object-cover w-full h-full" priority />
       </div>
       <div className="flex flex-col gap-7">
         <div className="flex flex-col">

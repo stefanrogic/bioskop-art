@@ -27,7 +27,7 @@ function LoadingAnimation(): JSX.Element {
         }}
         transition={{ duration: 1, delay: 3 }}
       >
-        <motion.h1 className="text-7xl font-normal text-white" initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1, delay: 2 }}>
+        <motion.h1 className="text-7xl font-light text-white" initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1, delay: 2 }}>
           <span className="font-bold">CINEMA CITY</span> UŽICE
         </motion.h1>
         <motion.div
