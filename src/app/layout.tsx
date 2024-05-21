@@ -1,3 +1,4 @@
+import { LoadingAnimation } from "@/containers/loading-animation";
 import "./globals.css";
 
 import type { Metadata } from "next";
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <LoadingAnimation />
+        <main className="bg-white max-w-[1400px] mx-auto">{children}</main>
+      </body>
     </html>
   );
 }

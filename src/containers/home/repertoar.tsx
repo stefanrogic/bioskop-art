@@ -6,16 +6,17 @@ import PulpFictionImg from "@/assets/images/movie-cards/pulp-fiction-card.png";
 import { Suspense } from "react";
 import { MovieCard } from "@/components/custom/movieCard/movie-card";
 import { MovieCardLoading } from "@/components/custom/movieCard/movie-card-loading";
+import supabase from "@/config/supabaseClient";
 
 function getCurrentMovies() {
   //! SIMULACIJA ZA PROVERU ANIMACIJE ZA UCITAVANJE
   // await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return [
-    { name: "Dina: Drugi Deo", img: DinaImg, date: "od 04 Marta", tag: "Uskoro", tagColor: "bg-red-500", genre: ["Akcija", "Drama"] },
-    { name: "Matriks", img: MatrixImg, date: "od 04 Marta", tag: "Premijera", tagColor: "bg-blue-500", genre: ["Akcija", "Drama"] },
-    { name: "Joker", img: JokerImg, date: "od 04 Marta", tag: "Zadnji dan", tagColor: "bg-yellow-500", genre: ["Akcija", "Drama"] },
-    { name: "Pulp Fiction", img: PulpFictionImg, date: "od 04 Marta", genre: ["Akcija", "Drama"] },
+    { naziv: "Dina: Drugi Deo", poster: DinaImg, datum: "od 04 Marta", tag: "Uskoro", tagColor: "bg-red-500", zanr: ["Akcija", "Drama"] },
+    { naziv: "Matriks", poster: MatrixImg, datum: "od 04 Marta", tag: "Premijera", tagColor: "bg-blue-500", zanr: ["Akcija", "Drama"] },
+    { naziv: "Joker", poster: JokerImg, datum: "od 04 Marta", tag: "Zadnji dan", tagColor: "bg-yellow-500", zanr: ["Akcija", "Drama"] },
+    { naziv: "Pulp Fiction", poster: PulpFictionImg, datum: "od 04 Marta", zanr: ["Akcija", "Drama"] },
   ];
 }
 
@@ -31,7 +32,7 @@ function RepertoarContainer() {
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5">
         {movies.map((movie, i) => (
           <Suspense key={i} fallback={<MovieCardLoading />}>
-            <MovieCard data={movie} />
+            {/* <MovieCard data={movie} /> */}
           </Suspense>
         ))}
       </div>
