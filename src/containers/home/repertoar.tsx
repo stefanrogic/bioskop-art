@@ -1,12 +1,12 @@
 "use client";
 
-import { Navigation, Scrollbar } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 interface DataProps {
   id: number;
   naziv: string;
-  poster: string;
+  poster?: string;
 }
 
 interface RepertoarProps {
@@ -15,15 +15,15 @@ interface RepertoarProps {
 
 function RepertoarContainer({ data }: RepertoarProps) {
   return (
-    <section className="space-y-10 mt-10 md:mt-20  scroll-m-20" id="repertoar">
+    <section className="space-y-10 mt-10 md:mt-20 scroll-m-20" id="repertoar">
       <div className="flex flex-col md:flex-row justify-between px-5 lg:px-20">
         <div className="flex flex-col items-start">
           <h2 className="font-bold text-gray-700">TRENUTNO NA</h2>
           <h1 className="font-bold text-4xl min-[768px]:text-5xl">REPERTOARU</h1>
         </div>
 
-        <div className="w-full flex flex-col ms-20 mt-1">
-          <div className="w-full flex flex-row space-x-5 justify-end items-center mb-5">
+        <div className="w-full hidden md:flex flex-col lg:ms-20 mt-1">
+          <div className="w-full flex flex-row space-x-5 md:justify-end items-center ">
             <button className="swiper-button-prev-movies rounded-full bg-red-500 text-white p-2">
               <svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -52,12 +52,12 @@ function RepertoarContainer({ data }: RepertoarProps) {
 
       <div className="block px-5 lg:px-20">
         <Swiper
-          modules={[Navigation, Scrollbar]}
+          modules={[Navigation]}
           scrollbar={{ el: ".swiper-scrollbar", draggable: true }}
           observer={true}
           observeParents={true}
           breakpoints={{
-            0: { spaceBetween: 20 },
+            150: { slidesPerView: 1, spaceBetween: 20 },
             420: {
               slidesPerView: 2,
             },
@@ -77,6 +77,7 @@ function RepertoarContainer({ data }: RepertoarProps) {
               </div>
               <h3 className="text-2xl font-semibold mt-5 text-black">{m.naziv}</h3>
               <span>od 04 Aprila</span>
+
               {/*<MovieCard {...(m as MovieData)} />*/}
             </SwiperSlide>
           ))}

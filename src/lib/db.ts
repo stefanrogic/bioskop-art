@@ -26,9 +26,10 @@ async function getCarouselSlides() {
   ];
 }
 
-async function getMovies() {
-  const { data, error } = await supabase.from("filmovis").select("id, naziv, poster");
-  return data;
+async function getMovies(q: string) {
+  const { data, error } = await supabase.from("filmovis").select(q);
+  if (data) return data;
+  else return error;
 }
 
 export { getCarouselSlides, getMovies };
