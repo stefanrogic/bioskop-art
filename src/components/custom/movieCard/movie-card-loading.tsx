@@ -1,7 +1,7 @@
 function MovieCardLoading() {
   return (
     <div className="w-full flex flex-col gap-5">
-      <div className="relative w-full aspect-[3/4] bg-slate-500 animate-pulse"></div>
+      <div className="relative w-full aspect-[4/6] bg-slate-500 animate-pulse"></div>
       <div className="flex flex-col gap-7">
         <div className="flex flex-col gap-3">
           <h4 className="text-xl font-semibold bg-slate-500 animate-pulse w-56 h-5"></h4>
