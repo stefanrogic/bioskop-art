@@ -57,15 +57,17 @@ function RepertoarContainer({ data }: RepertoarProps) {
           observer={true}
           observeParents={true}
           breakpoints={{
-            150: { slidesPerView: 1, spaceBetween: 20 },
             420: {
               slidesPerView: 2,
+              spaceBetween: 20,
             },
             930: {
               slidesPerView: 3,
+              spaceBetween: 20,
             },
             1280: {
               slidesPerView: 4,
+              spaceBetween: 20,
             },
           }}
           navigation={{ nextEl: ".swiper-button-next-movies", prevEl: ".swiper-button-prev-movies" }}
