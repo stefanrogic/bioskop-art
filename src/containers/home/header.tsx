@@ -1,3 +1,5 @@
+"use client";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -9,33 +11,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import { HeaderNavbar } from "@/components/custom/header-navbar";
 
-// ! KADA BAZA BUDE GOTOVA, PODACI CE SE POVLAČITI PREKO OVE FUNKCIJE
-function getCarouselSlides() {
-  return [
-    {
-      name: "Joker",
-      date: "04 Marta",
-      url: "https://magtghzmtpusmbfbvwcc.supabase.co/storage/v1/object/sign/slike/carousel/joker-banner.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzbGlrZS9jYXJvdXNlbC9qb2tlci1iYW5uZXIucG5nIiwiaWF0IjoxNzE2MjgxMTU1LCJleHAiOjQ4Njk4ODExNTV9.B_GcjPv-u-E-YeeNLKpcEgvMCkYVpF-gyvaL6wAL9u8&t=2024-05-21T08%3A45%3A54.605Z",
-    },
-    {
-      name: "Matriks",
-      date: "04 Marta",
-      url: "https://magtghzmtpusmbfbvwcc.supabase.co/storage/v1/object/sign/slike/carousel/matrix-banner.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzbGlrZS9jYXJvdXNlbC9tYXRyaXgtYmFubmVyLnBuZyIsImlhdCI6MTcxNjI4MTE2OSwiZXhwIjo0ODY5ODgxMTY5fQ.c3bUKJXXLAxb7f4zVI-qH--2V523kjIGxzZmtoHK17c&t=2024-05-21T08%3A46%3A08.173Z",
-    },
-    {
-      name: "Dina: Drugi Deo",
-      date: "04 Marta",
-      url: "https://magtghzmtpusmbfbvwcc.supabase.co/storage/v1/object/sign/slike/carousel/dune-banner.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzbGlrZS9jYXJvdXNlbC9kdW5lLWJhbm5lci5wbmciLCJpYXQiOjE3MTYyODEwMjMsImV4cCI6NDg2OTg4MTAyM30.xUA2ok9S1R0U4Ed5N4iT7ocitOZJNJO6LkZI2Ht0jt4&t=2024-05-21T08%3A43%3A41.883Z",
-    },
-    {
-      name: "Pulp Fiction",
-      date: "04 Marta",
-      url: "https://magtghzmtpusmbfbvwcc.supabase.co/storage/v1/object/sign/slike/carousel/pulp-fiction-banner.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzbGlrZS9jYXJvdXNlbC9wdWxwLWZpY3Rpb24tYmFubmVyLnBuZyIsImlhdCI6MTcxNjI4MTE4NCwiZXhwIjo0ODY5ODgxMTg0fQ.Qna5aTMuMHzbKWN-j7zHWMFeBzZSVV_JvpcSlPPpx3U&t=2024-05-21T08%3A46%3A23.640Z",
-    },
-  ];
+interface DataProps {
+  name: string;
+  date: string;
+  url: string;
 }
 
-function Header() {
+interface HeaderProps {
+  data: DataProps[];
+}
+
+function Header({ data }: HeaderProps) {
   return (
     <header className="relative">
       <HeaderNavbar />
@@ -53,20 +39,20 @@ function Header() {
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         className="h-[820px] w-full relative"
       >
-        {getCarouselSlides().map((s, i) => (
+        {data?.map((s, i) => (
           <SwiperSlide key={i} className="bg-slate-300 cursor-pointer">
             <Link href="/" className="relative cursor-pointer">
-              <div className="absolute z-50 flex flex-col items-start left-5 lg:left-20 bottom-[105px] w-full">
+              <div className="absolute z-50 flex flex-col items-start left-5 lg:left-20 bottom-10 lg:bottom-[105px] w-full">
                 <div className="flex space-x-3 mb-3 min-[900px]:me-auto items-center">
                   <div className="px-2 py-1 bg-red-700 text-white text-[12px] font-bold">Sala 1</div>
                   <div className="px-2 py-1 bg-red-700 text-white text-[12px] font-bold">3D</div>
                 </div>
-                <h2 className="text-5xl min-[900px]:text-7xl text-white font-bold">{s.name}</h2>
-                <p className="min-[900px]:text-2xl text-slate-300 font-light mt-1">od {s.date}</p>
+                <h2 className="text-5xl min-[900px]:text-7xl text-white font-bold">{s?.name}</h2>
+                <p className="min-[900px]:text-2xl text-slate-300 font-light mt-1">od {s?.date}</p>
               </div>
 
               <div className="absolute top-0 bg-gradient-to-b from-black to-transparent opacity-25 w-full h-24"></div>
-              <img className="object-cover w-full h-full mx-auto" src={s.url} alt="slide-img" />
+              <img className="object-cover w-full h-full mx-auto" src={s?.url} alt="slide-img" />
               <div className="absolute bottom-0 bg-gradient-to-t from-black opacity-45 w-full h-1/2"></div>
             </Link>
           </SwiperSlide>

@@ -38,6 +38,12 @@
     --swiper-pagination-bullet-inactive-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 0px;
 
+    @media only screen and (max-width: 1024px) {
+      .swiper-pagination-bullet {
+        display: none;
+      }
+    }
+
     .swiper-pagination-bullet {
       width: 20%;
       height: 2px;
