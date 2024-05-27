@@ -17,9 +17,9 @@ const navLinks = [
 
 function HeaderNavbar({ absolute = true }: HeaderNavbarProps): JSX.Element {
   return (
-    <nav className={`${absolute ? "absolute" : ""} top-0 z-50 px-5 lg:px-20 w-full flex flex-row justify-between items-start`}>
-      <motion.div className=" absolute bg-[#db0b0b] cursor-pointer" initial={{ top: "-145px" }} animate={{ top: 0 }} transition={{ duration: 0.2 }}>
-        <Link href="/">
+    <nav className={`${absolute ? "absolute" : "bg-slate-400"}  top-0 z-50 px-5 lg:px-20 w-full flex flex-row justify-between items-start`}>
+      <Link href="/">
+        <motion.div className=" absolute bg-[#db0b0b] cursor-pointer" initial={{ top: "-145px" }} animate={{ top: 0 }} transition={{ duration: 0.2 }}>
           <motion.div whileHover={{ marginTop: "25px" }} whileTap={{ marginTop: "75px" }}>
             <img
               className="w-20 md:w-36 aspect-square"
@@ -27,23 +27,18 @@ function HeaderNavbar({ absolute = true }: HeaderNavbarProps): JSX.Element {
               alt="nav-logo"
             />
           </motion.div>
-        </Link>
-      </motion.div>
+        </motion.div>
+      </Link>
 
-      <div className="ms-auto flex flex-row items-center gap-7 pt-5 md:pt-10">
+      <div className={`ms-auto flex flex-row items-center gap-7 ${absolute ? "py-10" : "py-5"}`}>
         <div className="hidden md:flex flex-row items-center gap-7">
           {navLinks.map((l, i) => (
-            <Link href={l.href} key={l.link + i} className={`${absolute ? "text-white" : "text-black"} font-bold hover:underline`}>
+            <Link href={l.href} key={l.link + i} className={`text-white font-bold hover:underline`}>
               {l.link}
             </Link>
           ))}
 
-          <Link
-            href="/#contact"
-            className={`${absolute ? "text-white" : "text-black"} border-2  ${absolute ? "border-white" : "border-black"} p-3 font-bold ${absolute ? "hover:text-black" : "hover:text-white"} ${
-              absolute ? "hover:bg-white" : "hover:bg-black"
-            } ease-in duration-300 px-10 py-3`}
-          >
+          <Link href="/#contact" className={`text-white border-2 border-whit p-3 font-bold hover:text-black hover:bg-white ease-in duration-300 px-10 py-3`}>
             Kontakt
           </Link>
         </div>

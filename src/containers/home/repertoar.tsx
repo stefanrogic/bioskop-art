@@ -78,7 +78,7 @@ function RepertoarContainer({ data }: RepertoarProps) {
           {data?.map((m) => (
             <SwiperSlide key={m.id}>
               <Suspense fallback={<div className="aspect-[4/6] bg-slate-500">Loading...</div>}>
-                <Link href={"/filmovi/" + m.slug}>
+                <Link href={"/repertoar/" + m.slug}>
                   <div className="aspect-[4/6] bg-slate-500">
                     <img className="object-cover w-full h-full" src={m.poster} alt="movie-poster" />
                   </div>
