@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { Suspense } from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -7,6 +9,7 @@ interface DataProps {
   id: number;
   naziv: string;
   poster?: string;
+  slug: string;
 }
 
 interface RepertoarProps {
@@ -50,7 +53,7 @@ function RepertoarContainer({ data }: RepertoarProps) {
         </div>
       </div>
 
-      <div className="block px-5 lg:px-20">
+      <div className="px-5 lg:px-20">
         <Swiper
           modules={[Navigation]}
           scrollbar={{ el: ".swiper-scrollbar", draggable: true }}
@@ -74,12 +77,15 @@ function RepertoarContainer({ data }: RepertoarProps) {
         >
           {data?.map((m) => (
             <SwiperSlide key={m.id}>
-              <div className="w-full aspect-[4/6] bg-slate-500">
-                <img className="object-cover w-full h-full" src={m.poster} alt="movie-poster" />
-              </div>
-              <h3 className="text-2xl font-semibold mt-5 text-black">{m.naziv}</h3>
-              <span>od 04 Aprila</span>
-
+              <Suspense fallback={<div className="aspect-[4/6] bg-slate-500">Loading...</div>}>
+                <Link href={"/filmovi/" + m.slug}>
+                  <div className="aspect-[4/6] bg-slate-500">
+                    <img className="object-cover w-full h-full" src={m.poster} alt="movie-poster" />
+                  </div>
+                  <h3 className="text-2xl font-semibold mt-5 text-black">{m.naziv}</h3>
+                  <span>od 04 Aprila</span>
+                </Link>
+              </Suspense>
               {/*<MovieCard {...(m as MovieData)} />*/}
             </SwiperSlide>
           ))}
