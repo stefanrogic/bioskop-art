@@ -15,6 +15,7 @@ interface DataProps {
   name: string;
   date: string;
   url: string;
+  link: string;
 }
 
 interface HeaderProps {
@@ -41,7 +42,7 @@ function Header({ data }: HeaderProps) {
       >
         {data?.map((s, i) => (
           <SwiperSlide key={i} className="bg-slate-300 cursor-pointer">
-            <Link href="/" className="relative cursor-pointer">
+            <Link href={s.link} className="relative cursor-pointer">
               <div className="absolute z-50 flex flex-col items-start left-5 lg:left-20 bottom-10 lg:bottom-[105px] w-full">
                 <div className="flex space-x-3 mb-3 min-[900px]:me-auto items-center">
                   <div className="px-2 py-1 bg-red-700 text-white text-[12px] font-bold">Sala 1</div>
