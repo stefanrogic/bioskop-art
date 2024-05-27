@@ -42,7 +42,7 @@ function ContactContainer(): JSX.Element {
       </div>
 
       <div className=" w-full lg:w-1/2 flex flex-col pt-10 overflow-hidden text-white font-normal">
-        <div className="flex flex-row flex-wrap gap-5 mb-10 min-[900px]:px-10">
+        <div className="flex flex-row flex-wrap gap-5 mb-10 min-[900px]:ps-10">
           <div className="p-10 w-full h-42 flex flex-col bg-stone-600 text-white text-center justify-center space-y-5 items-center">
             <div className="rounded-sm">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -15,7 +15,7 @@ function LoadingAnimation(): JSX.Element {
             display: "none",
           },
         }}
-        transition={{ duration: 1, delay: 3.5 }}
+        transition={{ duration: 1, delay: 1.2 }}
       ></motion.div>
       <motion.div
         key={1}
@@ -27,13 +27,14 @@ function LoadingAnimation(): JSX.Element {
             display: "none",
           },
         }}
-        transition={{ duration: 1, delay: 3 }}
+        transition={{ duration: 1, delay: 1 }}
       >
-        <motion.h1 className="text-7xl font-light text-white" initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1, delay: 2 }}>
-          <span className="font-bold">CINEMA CITY</span> UŽICE
-        </motion.h1>
-        <motion.div
-          className="w-[60%] p-2 min-h-20 border-4 border-white"
+        <motion.svg
+          width="100"
+          height="100"
+          fill="white"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
           initial={{ opacity: 1 }}
           animate={{
             opacity: 0,
@@ -41,20 +42,12 @@ function LoadingAnimation(): JSX.Element {
               display: "none",
             },
           }}
-          transition={{ duration: 1, delay: 2 }}
+          transition={{ duration: 1, delay: 0.5 }}
         >
-          <motion.div
-            className="bg-white h-full"
-            initial={{ width: 0 }}
-            animate={{
-              width: "100%",
-              transitionEnd: {
-                display: "none",
-              },
-            }}
-            transition={{ duration: 2 }}
-          ></motion.div>
-        </motion.div>
+          <path d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
+            <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite" />
+          </path>
+        </motion.svg>
       </motion.div>
     </>
   );

@@ -6,7 +6,7 @@ import { getCarouselSlides, getMovies } from "@/lib/db";
 
 export default async function HomePage() {
   const headerData = await getCarouselSlides();
-  const repertoarData = await getMovies("id, naziv, poster");
+  const repertoarData = await getMovies("id, naziv, poster,slug");
 
   return (
     <>
