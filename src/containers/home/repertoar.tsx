@@ -60,16 +60,16 @@ function RepertoarContainer({ data }: RepertoarProps) {
           observer={true}
           observeParents={true}
           breakpoints={{
-            420: {
-              slidesPerView: 2,
+            0: {
+              slidesPerView: 1.5,
               spaceBetween: 20,
             },
             930: {
-              slidesPerView: 3,
+              slidesPerView: 2.5,
               spaceBetween: 20,
             },
             1280: {
-              slidesPerView: 4,
+              slidesPerView: 3.5,
               spaceBetween: 20,
             },
           }}
