@@ -25,8 +25,6 @@ interface HeaderProps {
 function Header({ data }: HeaderProps) {
   return (
     <header className="relative">
-      <HeaderNavbar absolute={true} />
-
       <Swiper
         slidesPerView={1}
         centeredSlides={true}

@@ -8,10 +8,7 @@ export default async function MoviePage() {
 
   return (
     <>
-      <HeaderNavbar absolute={false} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <MovieContainer moviesData={moviesData as any} />
-      </Suspense>
+      <MovieContainer moviesData={moviesData as any} />
     </>
   );
 }
