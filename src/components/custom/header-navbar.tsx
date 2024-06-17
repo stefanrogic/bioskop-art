@@ -10,9 +10,9 @@ export interface HeaderNavbarProps {}
 
 const navLinks = [
   { link: "Početna", href: "/" },
-  { link: "Repertoar", href: "/#repertoar" },
-  { link: "Arhiva", href: "arhiva" },
-  { link: "O nama", href: "o-nama" },
+  { link: "Repertoar", href: "/repertoar" },
+  { link: "Arhiva", href: "/arhiva" },
+  { link: "O nama", href: "/o-nama" },
 ];
 
 function HeaderNavbar({}: HeaderNavbarProps): JSX.Element {
@@ -69,7 +69,8 @@ function HeaderNavbar({}: HeaderNavbarProps): JSX.Element {
           <div className="hidden xl:flex flex-row items-center h-full w-full ms-[144px]">
             {navLinks.map((l, i) => {
               const defaultStyles = "relative text-black h-[100%] font-bold h-full text-center flex justify-center items-center px-10 hover:bg-slate-300 transition ease-in-out duration-150";
-              const isActive = pathname.startsWith(l.href);
+
+              const isActive = l.href.length > 1 ? pathname.startsWith(l.href) : l.href === pathname;
 
               return (
                 <Link href={l.href} key={l.link + i} className={isActive ? "bg-slate-200 " + defaultStyles : defaultStyles}>

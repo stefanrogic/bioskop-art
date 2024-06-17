@@ -9,7 +9,7 @@ import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
-import { HeaderNavbar } from "@/components/custom/header-navbar";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface DataProps {
   name: string;
@@ -51,7 +51,9 @@ function Header({ data }: HeaderProps) {
               </div>
 
               <div className="absolute top-0 bg-gradient-to-b from-black to-transparent opacity-25 w-full h-24"></div>
+
               <img className="object-cover w-full h-full mx-auto" src={s?.url} alt="slide-img" />
+
               <div className="absolute bottom-0 bg-gradient-to-t from-black opacity-45 w-full h-1/2"></div>
             </Link>
           </SwiperSlide>
