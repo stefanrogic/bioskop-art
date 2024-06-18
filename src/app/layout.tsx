@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Roboto_Condensed } from "next/font/google";
 import { Footer } from "@/containers/footer";
-import { HeaderNavbar } from "@/components/custom/header-navbar";
+import { Navbar } from "@/components/custom/navbar";
 import { Suspense } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Loading from "./loading";
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <div>
           <main className="bg-white text-black max-w-[1400px] mx-auto relative box-border">
-            <HeaderNavbar />
+            <Navbar />
             {children}
             <Footer />
           </main>

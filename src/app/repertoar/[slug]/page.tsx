@@ -1,4 +1,4 @@
-import { HeaderNavbar } from "@/components/custom/header-navbar";
+import { HeaderNavbar } from "@/components/custom/navbar";
 import { MovieContainer } from "@/containers/moviePage/movie-container";
 import { getMovies } from "@/lib/db";
 import { Suspense } from "react";

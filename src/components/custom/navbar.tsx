@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-export interface HeaderNavbarProps {}
+export interface NavbarProps {}
 
 const navLinks = [
   { link: "Početna", href: "/" },
@@ -15,7 +15,7 @@ const navLinks = [
   { link: "O nama", href: "/o-nama" },
 ];
 
-function HeaderNavbar({}: HeaderNavbarProps): JSX.Element {
+function Navbar({}: NavbarProps): JSX.Element {
   const [menu, setMenu] = useState(false);
 
   const pathname = usePathname();
@@ -52,7 +52,7 @@ function HeaderNavbar({}: HeaderNavbarProps): JSX.Element {
         </div>
       ) : null}
 
-      <nav className="sticky top-0 z-40 bg-gray-100 px-5 lg:px-20 w-full flex flex-row items-start">
+      <nav className="sticky top-0 z-40 bg-white px-5 xl:px-20 w-full flex flex-row items-start border-b-4">
         <Link href="/">
           <motion.div className="fixed bg-[#db0b0b] cursor-pointer z-40" initial={{ top: "-145px" }} animate={{ top: 0 }} transition={{ duration: 0.2 }}>
             <motion.div whileHover={{ marginTop: "25px" }} whileTap={{ marginTop: "75px" }}>
@@ -75,7 +75,7 @@ function HeaderNavbar({}: HeaderNavbarProps): JSX.Element {
               return (
                 <Link href={l.href} key={l.link + i} className={isActive ? "bg-slate-200 " + defaultStyles : defaultStyles}>
                   {l.link}
-                  {isActive && <div className="absolute bottom-[-1px] w-full h-[5px] bg-red-600"></div>}
+                  {isActive && <div className="absolute bottom-[-4px] w-full h-[4px] bg-red-600"></div>}
                 </Link>
               );
             })}
@@ -102,4 +102,4 @@ function HeaderNavbar({}: HeaderNavbarProps): JSX.Element {
     </>
   );
 }
-export { HeaderNavbar };
+export { Navbar };

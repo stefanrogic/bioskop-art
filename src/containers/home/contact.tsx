@@ -1,6 +1,6 @@
 function ContactContainer(): JSX.Element {
   return (
-    <section className="lg:h-[720px] flex flex-col lg:flex-row items-center space-y-20 lg:space-y-0 lg:space-x-10 mt-20 min-[900px]:mt-40 scroll-m-20 px-5 min-[900px]:px-20" id="contact">
+    <section className="lg:h-[720px] flex flex-col lg:flex-row items-center space-y-20 lg:space-y-0 lg:space-x-10 scroll-m-20 px-5 min-[900px]:px-20" id="contact">
       <div className="h-[85%] w-full lg:w-1/2 flex flex-col justify-center">
         <div className="flex flex-col items-start">
           <h2 className="font-bold text-gray-700">IMATE PITANJE</h2>
