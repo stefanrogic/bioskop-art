@@ -23,7 +23,7 @@ function Navbar({}: NavbarProps): JSX.Element {
   return (
     <>
       {menu ? (
-        <div className="fixed z-[100] w-full h-[100vh] bg-black bg-opacity-50 flex flex-col">
+        <div className="bg-slate-200 fixed z-[100] w-full h-[100vh] flex flex-col">
           <div className="flex flex-row justify-end items-center h-[70px] bg-slate-200">
             <button className="text-black bg-slate-200 p-3 font-bold hover:bg-slate-300 ease-in-out duration-150" onClick={() => setMenu(false)}>
               <svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@ function Navbar({}: NavbarProps): JSX.Element {
             </button>
           </div>
           {navLinks.map((l, i) => {
-            const defaultStyles = "relative text-black bg-slate-200 h-[100%] font-bold h-full text-center flex justify-center items-center px-10 hover:bg-slate-300 transition ease-in-out duration-150";
+            const defaultStyles = "relative border border-slate-300 text-black bg-slate-200 h-[100%] font-bold h-full text-center flex justify-center items-center px-10 hover:bg-slate-300 transition ease-in-out duration-150";
             const isActive = pathname.startsWith(l.href);
 
             return (
@@ -57,7 +57,7 @@ function Navbar({}: NavbarProps): JSX.Element {
           <motion.div className="fixed bg-[#db0b0b] cursor-pointer z-40" initial={{ top: "-145px" }} animate={{ top: 0 }} transition={{ duration: 0.2 }}>
             <motion.div whileHover={{ marginTop: "25px" }} whileTap={{ marginTop: "75px" }}>
               <img
-                className="w-36 aspect-square"
+                className="w-[70px] md:w-36 aspect-square"
                 src="https://magtghzmtpusmbfbvwcc.supabase.co/storage/v1/object/sign/slike/ostalo/logo.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzbGlrZS9vc3RhbG8vbG9nby5qcGciLCJpYXQiOjE3MTYyODE1OTUsImV4cCI6MzMyNTIyODE1OTV9.r9wzQmFI3R1xtMeM4QCdcKfuGF3wTp6TF82A7WtfpCk&t=2024-05-21T08%3A53%3A13.805Z"
                 alt="nav-logo"
               />
@@ -81,7 +81,7 @@ function Navbar({}: NavbarProps): JSX.Element {
             })}
 
             <Link href="/#contact" className="text-white bg-[#db0b0b] font-bold px-10 h-full text-center flex justify-center items-center ms-auto hover:bg-[#a83838] transition ease-in-out duration-150">
-              Kontakt
+              KONTAKT
             </Link>
           </div>
 

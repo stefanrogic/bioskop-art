@@ -1,6 +1,7 @@
 "use client";
 
 import { MovieCard } from "@/components/custom/movie-card";
+import Link from "next/link";
 
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,15 +25,17 @@ function RepertoarContainer({ data }: RepertoarProps) {
   return (
     <section className="flex flex-col gap-[50px]" id="repertoar">
       <div className="flex flex-col md:flex-row justify-between px-5 xl:px-20">
-        <div className="flex flex-row gap-5 items-center w-full">
-          <div className="h-[0.5px] flex-1 bg-[#db0b0b]"></div>
-          <h1 className="font-bold text-5xl flex-1 text-center">NA REPERTOARU</h1>
-          <div className="h-[0.5px] flex-1 bg-[#db0b0b]"></div>
+        <div className="flex flex-row gap-10 items-center w-full">
+          <div className="flex flex-row gap-10 justify-center items-center w-full">
+            <div className="hidden md:block h-[0.5px]  bg-[#db0b0b] flex-1"></div>
+            <h1 className="font-bold text-4xl lg:text-5xl text-center">NA REPERTOARU</h1>
+            <div className="hidden md:block h-[0.5px] bg-[#db0b0b] flex-1"></div>
+          </div>
         </div>
       </div>
 
       <div className="relative px-5 xl:px-20">
-        <div className="absolute inset-x-0 inset-y-32 mx-auto top-0 w-full hidden md:flex flex-row justify-between items-center px-[60px]">
+        <div className="absolute inset-x-0 inset-y-10 h-10 my-auto top-0 w-full hidden md:flex flex-row justify-between items-center px-[60px] ">
           <button className="z-30 swiper-button-prev-movies rounded-full bg-[#db0b0b] border-2 border-white text-white p-2">
             <svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -53,6 +56,21 @@ function RepertoarContainer({ data }: RepertoarProps) {
               ></path>
             </svg>
           </button>
+        </div>
+
+        <div className="w-full flex flex-row justify-end gap-5 mb-5">
+          <Link href="/arhiva" className="flex flex-row gap-1 items-center border-2 border-gray-500 hover:bg-gray-500 hover:text-white text-black px-10 py-3 ">
+            {/* <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.30902 1C2.93025 1 2.58398 1.214 2.41459 1.55279L1.05279 4.27639C1.01807 4.34582 1 4.42238 1 4.5V13C1 13.5523 1.44772 14 2 14H13C13.5523 14 14 13.5523 14 13V4.5C14 4.42238 13.9819 4.34582 13.9472 4.27639L12.5854 1.55281C12.416 1.21403 12.0698 1.00003 11.691 1.00003L7.5 1.00001L3.30902 1ZM3.30902 2L7 2.00001V4H2.30902L3.30902 2ZM8 4V2.00002L11.691 2.00003L12.691 4H8ZM7.5 5H13V13H2V5H7.5ZM5.5 7C5.22386 7 5 7.22386 5 7.5C5 7.77614 5.22386 8 5.5 8H9.5C9.77614 8 10 7.77614 10 7.5C10 7.22386 9.77614 7 9.5 7H5.5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg> */}
+            ARHIVA
+          </Link>
+          <button className="border-2 border-gray-500 hover:bg-gray-500 hover:text-white text-black px-10 py-3 ">FILTERI</button>
         </div>
 
         <Swiper

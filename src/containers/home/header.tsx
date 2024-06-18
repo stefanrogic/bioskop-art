@@ -49,19 +49,19 @@ function Header({ data }: HeaderProps) {
                   {s.tags ? (
                     <div className="flex flex-row">
                       {s.tags.map((t, i) => (
-                        <div key={i} className="bg-yellow-400 text-black font-bold px-5 py-2">
+                        <div key={i} className="bg-yellow-400 text-black font-bold px-5 py-2 text-sm md:text-md">
                           {t}
                         </div>
                       ))}
                     </div>
                   ) : null}
                   <div className="p-10 bg-black flex flex-col gap-5">
-                    <h2 className="text-6xl text-white font-bold">{s?.name}</h2>
+                    <h2 className="text-3xl md:text-6xl text-white font-bold ">{s?.name}</h2>
                   </div>
                   <div className="flex flex-row">
-                    <div className="bg-[#a83838] text-white font-bold px-5 py-2">{s?.date.toUpperCase()}</div>
-                    {s.time ? <div className="bg-[#db0b0b] text-white font-bold px-5 py-2">{s.time}</div> : null}
-                    {s.sala ? <div className="bg-red-500 text-white font-bold px-5 py-2">{s.sala}</div> : null}
+                    <div className="bg-[#a83838] text-white font-bold px-5 py-2 text-sm md:text-md">{s?.date.toUpperCase()}</div>
+                    {s.time ? <div className="bg-[#db0b0b] text-white font-bold px-5 py-2 text-sm md:text-md">{s.time}</div> : null}
+                    {s.sala ? <div className="bg-red-500 text-white font-bold px-5 py-2 text-sm md:text-md">{s.sala}</div> : null}
                   </div>
                 </div>
 
