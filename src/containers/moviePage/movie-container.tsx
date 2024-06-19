@@ -91,14 +91,14 @@ function MovieContainer({ moviesData }: Props) {
             </div>
           </div>
 
-          <div className="w-full h-[100px] border-[0.5px] flex justify-start items-center gap-[50px]">
+          <div className="w-full h-[100px] border-[0.5px] flex justify-start items-center">
             <div className="h-full aspect-square  bg-[#db0b0b] flex justify-center items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" className="bi bi-ticket-detailed" viewBox="0 0 16 16">
                 <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2z" />
                 <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5z" />
               </svg>
             </div>
-            <h4 className="font-bold text-lg">Cena ulaznice: 400 din - Karte se kupuju u biletarnici na dan projekcije.</h4>
+            <h4 className="font-bold text-lg mx-[50px]">Cena ulaznice: 400 din - Karte se kupuju u biletarnici na dan projekcije.</h4>
           </div>
         </div>
       </section>
