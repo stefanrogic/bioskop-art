@@ -64,7 +64,7 @@ function Header({ data }: HeaderProps) {
                 </div>
               </div>
 
-              <div className="hidden xl:flex flex-col lg:flex-row gap-5">
+              <div className="hidden xl:flex flex-col lg:flex-row gap-5 z-40">
                 <Link href={s.link} className="bg-[#db0b0b] hover:bg-[#a83838] text-white px-14 py-5 font-bold">
                   DETALJNIJE
                 </Link>
@@ -75,7 +75,9 @@ function Header({ data }: HeaderProps) {
             </div>
 
             <div className="absolute top-0 bg-gradient-to-b from-black to-transparent opacity-25 w-full h-24"></div>
-            <img className="object-cover w-full h-full mx-auto" src={s?.url} alt="slide-img" />
+            <Link className="pointer-events-auto lg:pointer-events-none" href={s.link}>
+              <img className="object-cover w-full h-full mx-auto" src={s?.url} alt="slide-img" />
+            </Link>
             <div className="absolute bottom-0 bg-gradient-to-t from-black opacity-45 w-full h-1/2"></div>
           </SwiperSlide>
         ))}

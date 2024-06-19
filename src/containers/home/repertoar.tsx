@@ -35,7 +35,7 @@ function RepertoarContainer({ data }: RepertoarProps) {
       </div>
 
       <div className="relative px-5 xl:px-20">
-        <div className="absolute inset-x-0 inset-y-10 h-10 my-auto top-0 w-full hidden md:flex flex-row justify-between items-center px-[60px] ">
+        <div className="absolute inset-x-0 inset-y-10 h-10 my-auto top-0 w-full hidden lg:flex flex-row justify-between items-center px-[60px] ">
           <button className="z-30 swiper-button-prev-movies rounded-full bg-[#db0b0b] border-2 border-white text-white p-2">
             <svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
