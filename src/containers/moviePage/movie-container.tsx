@@ -44,6 +44,12 @@ function MovieContainer({ moviesData }: Props) {
             <p className="text-xl">od 13. Juna</p>
           </div>
 
+          <div className="flex flex-row gap-2">
+            <div className="bg-[#db0b0b] text-white text-sm font-bold px-3 py-1">USKORO</div>
+            <div className="bg-yellow-300 text-black text-sm font-bold px-3 py-1">SIHRONIZOVANO</div>
+            <div className="bg-yellow-300 text-black text-sm font-bold px-3 py-1">3D</div>
+          </div>
+
           <div>
             <p className="text-lg font-light">
               Ponovo zavirujemo u um tinejdžerke Rajli. Glasići u njenoj glavi poznaju je vrlo dobro, međutim promene su izvesne i to baš u trenutku kada glavna komanda počne iznenada da se ruši kako bi se napravio prostor za nešto potpuno
