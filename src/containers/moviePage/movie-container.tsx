@@ -32,13 +32,13 @@ function MovieContainer({ moviesData }: Props) {
 
   return (
     <div className="flex flex-col gap-[100px]">
-      <section className="flex flex-row mt-[100px] gap-[50px] px-5 xl:px-20" id={slug}>
-        <div className="w-1/3">
-          <div className="sticky top-40 w-full aspect-[3/4] bg-gray-400">
+      <section className="flex flex-col md:flex-row mt-[20px] md:mt-[100px] gap-[50px] px-5 xl:px-20" id={slug}>
+        <div className="md:w-1/3">
+          <div className="md:sticky md:top-40 w-full aspect-[3/4] bg-gray-400">
             <img src="https://www.tuck.rs/wp-content/uploads/2024/06/1717769665INOT2_006C_G_SRP-RS_70x100__copy.jpg" alt="movie-poster" className="w-full object-cover" />
           </div>
         </div>
-        <div className="w-2/3 flex flex-col gap-[30px] relative">
+        <div className="md:w-2/3 flex flex-col gap-[30px] relative">
           <div>
             <h2 className="font-bold text-5xl">U Mojoj Glavi</h2>
             <p className="text-xl">od 13. Juna</p>
@@ -164,7 +164,7 @@ function MovieContainer({ moviesData }: Props) {
               clickable: true,
             }}
             modules={[Navigation, Pagination, Autoplay, EffectFade]}
-            className="w-full aspect-video"
+            className="w-full aspect-video select-none"
           >
             <SwiperSlide>
               <img src="https://www.dominomagazin.com/wp-content/uploads/2023/11/inside-out-2-u-mojoj-glavi-2.webp" alt="movie-image" className="w-full h-full object-cover" />

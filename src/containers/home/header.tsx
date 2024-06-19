@@ -39,7 +39,7 @@ function Header({ data }: HeaderProps) {
           clickable: true,
         }}
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
-        className="h-[720px] w-full relative"
+        className="h-[720px] w-full relative select-none"
       >
         {data?.map((s, i) => (
           <SwiperSlide key={i} className="bg-slate-300 cursor-pointer">
