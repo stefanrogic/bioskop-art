@@ -1,6 +1,6 @@
 function ContactContainer(): JSX.Element {
   return (
-    <section className="flex flex-col gap-[50px] w-full lg:w-[60%] mx-auto" id="contact">
+    <section className="flex flex-col gap-[50px] w-full lg:w-[60%] mx-auto scroll-m-40" id="contact">
       <div className=" flex flex-col justify-center">
         <div className="flex flex-col md:flex-row justify-between px-5 xl:px-20">
           <div className="flex flex-row gap-10 justify-start items-center w-full">
@@ -64,11 +64,11 @@ function ContactContainer(): JSX.Element {
           <div className="h-[0.5px] bg-[#db0b0b] w-24"></div>
           <form className="flex flex-col gap-5 w-full">
             <div className="flex flex-row gap-5">
-              <input className="w-full h-[50px] px-5 bg-gray-200" placeholder="Ime i prezime" type="text" />
-              <input className="w-full h-[50px] px-5 bg-gray-200" placeholder="Email adresa" type="text" />
+              <input className="border-[0.5px] border-black w-full h-[50px] px-5 bg-gray-200" placeholder="Ime i prezime" type="text" />
+              <input className="border-[0.5px] border-black w-full h-[50px] px-5 bg-gray-200" placeholder="Email adresa" type="text" />
             </div>
-            <input className="w-full h-[50px] px-5 bg-gray-200" placeholder="Predmet poruke" type="text" />
-            <textarea className="w-full p-5 bg-gray-200" placeholder="Poruka" rows={8} cols={50} />
+            <input className="border-[0.5px] border-black w-full h-[50px] px-5 bg-gray-200" placeholder="Predmet poruke" type="text" />
+            <textarea className="border-[0.5px] border-black w-full p-5 bg-gray-200" placeholder="Poruka" rows={8} cols={50} />
             <button className="mx-auto bg-[#db0b0b] text-white px-10 py-3 ">POSALJITE</button>
           </form>
         </div>

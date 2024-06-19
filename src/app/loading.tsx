@@ -1,7 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const variants = { show: { height: "100vh" }, hide: { height: 0, transition: { height: { duration: 1, delay: 1 } } } };
 

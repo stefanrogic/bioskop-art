@@ -55,7 +55,7 @@ function BlogContainer(): JSX.Element {
               slidesPerView: 1.5,
               spaceBetween: 20,
             },
-            500: { slidesPerView: 2.5, spaceBetween: 20 },
+            800: { slidesPerView: 2.5, spaceBetween: 20 },
           }}
           navigation={{ nextEl: ".swiper-button-next-blog", prevEl: ".swiper-button-prev-blog" }}
         >

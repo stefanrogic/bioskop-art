@@ -1,14 +1,13 @@
-import { HeaderNavbar } from "@/components/custom/navbar";
+import { RepertoarContainer } from "@/containers/home/repertoar";
 import { MovieContainer } from "@/containers/moviePage/movie-container";
 import { getMovies } from "@/lib/db";
-import { Suspense } from "react";
 
 export default async function MoviePage() {
-  const moviesData = await getMovies("id, naziv, poster, slug, zanr, opis, trejler_url");
+  const movieData = await getMovies("id, naziv, poster, slug, datum_pocetka, datum_zavrsetka, tag");
 
   return (
     <>
-      <MovieContainer moviesData={moviesData as any} />
+      <MovieContainer moviesData={movieData as any} />
     </>
   );
 }

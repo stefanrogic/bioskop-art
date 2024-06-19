@@ -21,10 +21,6 @@ const months = ["Januara", "Februara", "Marta", "Aprila", "Maja", "Juna", "Avgus
 function MovieCard({ data }: Data): JSX.Element {
   const [cardWidth, setCardWidth] = useState("[340px]");
 
-  useEffect(() => {
-    setTimeout(() => setCardWidth("full"), 500);
-  });
-
   const formatDate = (date: string) => {
     const split = date.split("-");
 
@@ -33,8 +29,8 @@ function MovieCard({ data }: Data): JSX.Element {
 
   return (
     <Link href={"/repertoar/" + data.slug}>
-      <div className="flex flex-col gap-3">
-        <div className={`w-${cardWidth} aspect-[2/3] bg-gray-400`}>
+      <div className="max-w-${cardWidth} flex flex-col gap-3">
+        <div className={`w-full aspect-[2/3] bg-gray-400`}>
           <img className="object-cover w-full h-full" src={data.poster} alt="movie-poster" />
         </div>
 
