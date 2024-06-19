@@ -1,12 +1,11 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto_Condensed } from "next/font/google";
 import { Footer } from "@/containers/footer";
-import { LoadingAnimation } from "@/containers/loading-animation";
-import { HeaderNavbar } from "@/components/custom/header-navbar";
+import { Navbar } from "@/components/custom/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto_Condensed({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Bioskop Art",
@@ -20,12 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <LoadingAnimation />
-        <main className="bg-white text-black max-w-[1400px] mx-auto relative">
-          {children}
-          <Footer />
-        </main>
+      <body className={roboto.className}>
+        <div>
+          <main className="bg-white text-black max-w-[1400px] mx-auto relative box-border">
+            <Navbar />
+            {children}
+            <Footer />
+          </main>
+        </div>
       </body>
     </html>
   );
