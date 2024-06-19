@@ -9,7 +9,6 @@ import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
-import { AnimatePresence, motion } from "framer-motion";
 
 interface DataProps {
   name: string;
