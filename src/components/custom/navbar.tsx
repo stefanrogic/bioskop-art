@@ -37,11 +37,11 @@ function Navbar({}: NavbarProps): JSX.Element {
             </button>
           </div>
           {navLinks.map((l, i) => {
-            const defaultStyles = "relative border border-slate-300 text-black bg-slate-200 h-[100%] font-bold h-full text-center flex justify-center items-center px-10 hover:bg-slate-300 transition ease-in-out duration-150";
+            const defaultStyles = "relative border border-slate-300 text-black bg-slate-200 font-bold h-full w-full text-center flex justify-center items-center px-10 hover:bg-slate-300 transition ease-in-out duration-150";
             const isActive = pathname.startsWith(l.href);
 
             return (
-              <Link href={l.href} key={l.link + i} className={isActive ? "bg-slate-200 " + defaultStyles : defaultStyles} onClick={() => setMenu(false)}>
+              <Link href={l.href} key={l.link + i} className={isActive ? "bg-slate-300 " + defaultStyles : defaultStyles} onClick={() => setMenu(false)} style={{ fontSize: "50px" }}>
                 {l.link}
               </Link>
             );

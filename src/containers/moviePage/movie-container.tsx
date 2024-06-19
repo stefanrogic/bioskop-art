@@ -38,16 +38,18 @@ function MovieContainer({ moviesData }: Props) {
             <img src="https://www.tuck.rs/wp-content/uploads/2024/06/1717769665INOT2_006C_G_SRP-RS_70x100__copy.jpg" alt="movie-poster" className="w-full object-cover" />
           </div>
         </div>
-        <div className="md:w-2/3 flex flex-col gap-[30px] relative">
-          <div>
-            <h2 className="font-bold text-5xl">U Mojoj Glavi</h2>
-            <p className="text-xl">od 13. Juna</p>
-          </div>
+        <div className="md:w-2/3 flex flex-col gap-[30px]  relative">
+          <div className="flex flex-col gap-3">
+            <div>
+              <h2 className="font-bold text-5xl">U Mojoj Glavi</h2>
+              <p className="text-xl">od 13. Juna</p>
+            </div>
 
-          <div className="flex flex-row gap-2">
-            <div className="bg-[#db0b0b] text-white text-sm font-bold px-3 py-1">USKORO</div>
-            <div className="bg-yellow-300 text-black text-sm font-bold px-3 py-1">SIHRONIZOVANO</div>
-            <div className="bg-yellow-300 text-black text-sm font-bold px-3 py-1">3D</div>
+            <div className="flex flex-row gap-2">
+              <div className="bg-[#db0b0b] text-white text-sm font-bold px-3 py-1">USKORO</div>
+              <div className="bg-yellow-300 text-black text-sm font-bold px-3 py-1">SIHRONIZOVANO</div>
+              <div className="bg-yellow-300 text-black text-sm font-bold px-3 py-1">3D</div>
+            </div>
           </div>
 
           <div>
@@ -91,7 +93,7 @@ function MovieContainer({ moviesData }: Props) {
             </div>
           </div>
 
-          <div className="w-full h-[100px] border-[0.5px] flex justify-start items-center">
+          <div className="w-full h-[75px] border-[0.5px] flex justify-start items-center">
             <div className="h-full aspect-square  bg-[#db0b0b] flex justify-center items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" className="bi bi-ticket-detailed" viewBox="0 0 16 16">
                 <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2z" />

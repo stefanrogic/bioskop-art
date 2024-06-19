@@ -11,9 +11,9 @@ export default async function AboutPage() {
         <div className="flex flex-col md:flex-row justify-between px-5 xl:px-20">
           <div className="flex flex-row gap-10 items-center w-full">
             <div className="flex flex-row gap-10 justify-center items-center w-full">
-              <div className="hidden md:block h-[0.5px]  bg-[#db0b0b] flex-1"></div>
+              <div className="hidden md:block h-[1px]  bg-[#db0b0b] flex-1"></div>
               <h1 className="font-bold text-4xl lg:text-5xl text-center">O NAMA</h1>
-              <div className="hidden md:block h-[0.5px] bg-[#db0b0b] flex-1"></div>
+              <div className="hidden md:block h-[1px] bg-[#db0b0b] flex-1"></div>
             </div>
           </div>
         </div>
@@ -64,9 +64,9 @@ export default async function AboutPage() {
         <div className="flex flex-col md:flex-row justify-between px-5 xl:px-20">
           <div className="flex flex-row gap-10 items-center w-full">
             <div className="flex flex-row gap-10 justify-center items-center w-full">
-              <div className="hidden md:block h-[0.5px]  bg-[#db0b0b] flex-1"></div>
+              <div className="hidden md:block h-[1px]  bg-[#db0b0b] flex-1"></div>
               <h1 className="font-bold text-4xl lg:text-5xl text-center">GALERIJA</h1>
-              <div className="hidden md:block h-[0.5px] bg-[#db0b0b] flex-1"></div>
+              <div className="hidden md:block h-[1px] bg-[#db0b0b] flex-1"></div>
             </div>
           </div>
         </div>
